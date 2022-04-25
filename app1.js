@@ -1,0 +1,3 @@
+function refresh() {
+    formulario.reset();
+}
