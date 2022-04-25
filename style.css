@@ -149,23 +149,3 @@ section p{
     border-radius: 50px;
     text-transform: uppercase;
 }
-.form-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px 0;
-  }
-.mi-input{
-    width: 20%;
-    min-width: 150px;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-.mi-input input {
-    border-radius: 5px;
-    border: 2px solid black;
-    padding: 30px 20px;
-    width: 100%;
-}
-
