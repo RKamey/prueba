@@ -21,10 +21,7 @@
           <form class="form-container" id="formularioBiseccion">
             <div class="mi-input d-flex flex-row form-container form-floating bd-highlight mb-3">
               <input type="text" class="text-center form-control" placeholder="Ingrese el valor de f(x)" id="Fx">
-              <label 
-              style="text-transform: lowercase"
-              onkeyup="javascript:this.value=this.value.toLowerCase();"
-              for="Fx">Ingrese el valor de f(x)
+              <label style="text-transform: lowercase"onkeyup="javascript:this.value=this.value.toLowerCase();"for="Fx">Ingrese el valor de f(x)
             </label>
             </div>
 
@@ -43,23 +40,21 @@
               <label for="xu3">Ingrese el valor de Xu</label>
             </div>
 
-            <input type="button" class="btn btn-outline-primary w-100" name="Calcular" value="Calcular" onclick="allInputs(); formula()">
+            <input type="button" class="btn btn-outline-primary w-100" name="Calcular" value="Calcular" onclick="formula()">
             <input type="button" class="btn btn-outline-secondary w-100" name="Limpiar valores" value="Limpiar valores" onclick="refreshBiseccion()">
-
-            <div>
-            <div class="alertResult" id="Result"></div>
-            </div>
-
-            <div class="tabsContent">
-              <h2 class="tabsTitle">resultado</h2>
-              <p class="tabsText">
-              </p>
+  
           </form>
 
-          <div class="container-fluid">
-            <button href="#" style="position: absolute;bottom: 5%;left: 3%;" class="btn btn-dark px-4 py-2" onclick="window.location='index.html'">Regresar</button>
+          <div class="tabsContent" style="display:none" id="resultados">
+            <span class="badge bg-secondary"><h2 class="tabsTitle">Resultados</h2></span>
+            <p class="tabsText">
+            </p>
+            <div class="alertResult" id="Result"></div>
           </div>
-        </div>
+
+          <div class="container-fluid">
+            <button href="#" style="position: fixed;bottom: 5%;left: 3%;" class="btn btn-dark px-4 py-2" onclick="window.location='index.html'">Regresar</button>
+          </div>
       </div>
     </div>
 
