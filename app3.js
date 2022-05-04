@@ -1,3 +1,0 @@
-function refreshBiseccion() {
-    formularioBiseccion.reset();
-}
