@@ -1,0 +1,3 @@
+function refreshSecante() {
+    formularioSecante.reset();
+}
