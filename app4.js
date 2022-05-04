@@ -1,3 +1,0 @@
-function refreshSustitucion() {
-    formularioSecante.reset();
-}
