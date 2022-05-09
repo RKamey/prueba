@@ -46,11 +46,7 @@ h2 {
     text-align: right;
     border: 2px solid #0d6efd;
   }
-  #resultados{
-    text-align: left;
-    justify-content: left;
-  }
-  #Result {
+  .resultados{
     text-align: center;
     justify-content: center;
   }

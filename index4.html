@@ -20,7 +20,7 @@
         <div id="sustitucion">
           <form class="form-container" id="formularioSustitucion">
             <div class="mi-input d-flex flex-row form-container form-floating bd-highlight mb-3">
-              <input type="number" class="text-center form-control" placeholder="Ingrese el valor de f(x)" id="Fx4">
+              <input type="text" class="text-center form-control" placeholder="Ingrese el valor de f(x)" id="Fx4">
               <label for="Fx4">Ingrese el valor de f(x)</label>
             </div>
 
@@ -34,12 +34,7 @@
               <label for="xi4">Ingrese el valor de Xi</label>
             </div>
 
-            <div class="mi-input d-flex flex-row form-container form-floating bd-highlight mb-3">
-              <input type="number" class="text-center form-control" placeholder="Ingrese el valor de Xu" id="xu4">
-              <label for="xu4">Ingrese el valor de Xu</label>
-            </div>
-
-            <input type="button" class="btn btn-outline-primary w-100" name="Calcular" value="Calcular">
+            <input type="button" class="btn btn-outline-primary w-100" name="Calcular" value="Calcular" onclick="formula()">
             <input type="button" class="btn btn-outline-secondary w-100" name="Limpiar" value="Limpiar valores" onclick="refreshSecante()">
           </form>
 
