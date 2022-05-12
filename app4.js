@@ -1,5 +1,8 @@
-function refreshSustitucion() {
-    formularioSecante.reset();
+function refreshRegla() {
+  let result = document.getElementById("Result");
+  result.innerHTML = "";
+  document.getElementById("resultados").style.display = "none";
+  formularioRegla.reset();
 }
 
 /*
@@ -28,9 +31,9 @@ function formula() {
   let porcentualError = 0;
   let iteracion = 0;
   fx = fx.replace("^", "**");
-if (fx.length == 0 || xi == '' || xu == '' || error == '') {
-  result.innerHTML ="<h1>NO HAY DATOS</h1>";
-} else {
+  if(fx.length == 0 || xi == '' || xu == '' || error == '') {
+    result.innerHTML ="<h1>NO HAY DATOS</h1>";
+  } else {
   do {
     iteracion++;
     let fXI = eval(fx.replace(/x/g, xi));
