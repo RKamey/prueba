@@ -1,8 +1,5 @@
-function refreshRegla() {
-  let result = document.getElementById("Result");
-  result.innerHTML = "";
-  document.getElementById("resultados").style.display = "none";
-  formularioRegla.reset();
+function refreshSustitucion() {
+    formularioSecante.reset();
 }
 
 /*
@@ -19,7 +16,6 @@ function allInputs() {
   }
 */
 function formula() {
-  let fx = document.getElementById("Fx").value; // FUNCTION
   let xi = parseFloat(document.getElementById("xi4").value); //X INFERIOR
   let xu = parseFloat(document.getElementById("xu4").value); //X SUPERIOR
   let error = parseFloat(document.getElementById("error4").value); //TOLERANCIA DE ERROR PER ITERACION
@@ -30,29 +26,27 @@ function formula() {
   let xa=0;
   let porcentualError = 0;
   let iteracion = 0;
-  fx = fx.replace("^", "**");
-  if(fx.length == 0 || xi == '' || xu == '' || error == '') {
-    result.innerHTML ="<h1>NO HAY DATOS</h1>";
-  } else {
+//if (xi == '' || xu == '' || error == '') {
+// result.innerHTML ="<h1>NO HAY DATOS</h1>";
+//} else {
   do {
-    iteracion++;
-    let fXI = eval(fx.replace(/x/g, xi));
-    //let fXR = eval(fx.replace(/x/g, xr));
-    let fXU = eval(fx.replace(/x/g, xu));
+    iteracion++
 
-    xr = xu - (((xi - xu) * fXU) / (fXI - fXU));
-    
+    let fXI = (xi * Math.exp(xi)) - 1;
+    let fXU = (xu * Math.exp(xu)) - 1;
+
+    let xr = xu - (((xi - xu) * fXU) / (fXI - fXU));
+
+    //xa = xr;
     porcentualError = Math.abs(((xr - xa) / xr) * 100);
     xa = xr;
-    //EVALUAR F(xi) F(xr) F(xu);
-    //let fXI = eval(fx.replace(/x/g, xi));
-    let fXR = eval(fx.replace(/x/g, xr));
-    //let fXU = eval(fx.replace(/x/g, xu));
-    
+
+    let fXR = (xr * Math.exp(xr)) - 1;
+
     if (fXR < 0) {
-      xi = xa;
+        xi = xa;
     } else {
-      xu = xr;
+        xu = xr;
     }
     //EVALUAR NUEVO INTERVALO PARA IMPRIMIRLO
     let nuevoIntervalo = 0;
@@ -65,6 +59,6 @@ function formula() {
 
     result.innerHTML += `<h2>ITERACIÓN ${iteracion}</h2><p><b>XR = </b>${xr}<br><b>Error = </b>${porcentualError}%<br><br><b>Fxi(${xi}) = </b>${fXI}<br><b>Fxr(${xr}) = </b>${fXR}<br><b>Fxu(${xu}) = </b>${fXU}<br><br><b>Siguiente Intervalo = </b>${nuevoIntervalo}</p><br>`;
   } while (porcentualError >= error);
-}
+//}
 
 }

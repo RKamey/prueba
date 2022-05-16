@@ -17,12 +17,14 @@
     <div class="d-flex justify-content-center px-5 py-4 tab-content">
       <div class="text-center">
 
-        <div id="regla">
-          <form class="form-container" id="formularioRegla">
+        <div id="sustitucion">
+          <form class="form-container" id="formularioSustitucion">
             <div class="mi-input d-flex flex-row form-container form-floating bd-highlight mb-3">
-              <input type="text" class="text-center form-control" placeholder="Ingrese el valor de f(x)" id="Fx">
-              <label style="text-transform: lowercase"onkeyup="javascript:this.value=this.value.toLowerCase();"for="Fx">Ingrese el valor de f(x)
-            </label>
+              <div class="figure">
+                <img src="img/formula.png"
+                     width="500"
+                     height="341">
+              </div>
             </div>
 
             <div class="mi-input d-flex flex-row form-container form-floating bd-highlight mb-3">
@@ -41,7 +43,7 @@
             </div>
 
             <input type="button" class="btn btn-outline-primary w-100" name="Calcular" value="Calcular" onclick="formula()">
-            <input type="button" class="btn btn-outline-secondary w-100" name="Limpiar" value="Limpiar valores" onclick="refreshRegla()">
+            <input type="button" class="btn btn-outline-secondary w-100" name="Limpiar" value="Limpiar valores" onclick="refreshSecante()">
           </form>
 
           <div class="tabsContent" style="display:none" id="resultados">
